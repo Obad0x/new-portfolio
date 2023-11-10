@@ -52,15 +52,15 @@ const Mail = () => {
       error.current.style.display = 'block'
     } else {
       // Using email.js to send emails https://www.emailjs.com/docs/sdk/installation/
-      // use .env to store ids and keys from email.js
-      // emailjs.send(serviceID, templateID, toSend, publicKey)
-      //   .then((response) => {
-      //     formResMsg.current.innerText = "Message sent..."
-      //     reset();
-      //   }, (err) => {
-      //     formResMsg.current.innerText = "Failed... " + err.text
-      // });
-      // error.current.style.display = 'none'
+    //  use .env to store ids and keys from email.js
+      emailjs.send(serviceID, templateID, toSend, publicKey)
+        .then((response) => {
+          formResMsg.current.innerText = "Message sent..."
+          reset();
+        }, (err) => {
+          formResMsg.current.innerText = "Failed... " + err.text
+      });
+      error.current.style.display = 'none'
     }
   }
 
