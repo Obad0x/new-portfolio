@@ -5,18 +5,18 @@ import "../styles/Projects.css";
 const Projects = () => {
   const projectsInfo = [
     {
-      name: "Project 1",
-      desc: "congue quisque egestas diam in arcu cursus euismod quis viverra nibh cras pulvinar mattis nunc sed blandit libero volutpat sed",
-      liveLink: "website url",
-      githubLink: "https://github.com/",
-      techs: ["HTML", "CSS", "TypeScript"],
+      name: "YTD",
+      desc: "a simple youtube video downloader to download youtube videos",
+      liveLink: "https://tuts-downloader.onrender.com/",
+      githubLink: "https://github.com/obaddabo/youtube-video-downloader-telegram-bot",
+      techs: ["EJS", "CSS", "NodeJS"],
       isOpenSource: true,
     },
     {
-      name: "Project 2",
-      desc: "congue quisque egestas diam in arcu cursus euismod quis viverra nibh cras pulvinar mattis nunc sed blandit libero volutpat sed",
-      liveLink: "website url",
-      githubLink: "https://github.com/",
+      name: "Gen z Dictionary",
+      desc: " a simple app to find out the meaning of popular slangs etc ",
+      liveLink: "https://genzdictionary.onrender.com",
+      githubLink: "https://github.com/obaddabo/genz-dictionary",
       techs: ["React", "Node", "MongoDB", "Socket.io", "Redux"],
       isOpenSource: true,
     },
