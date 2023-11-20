@@ -3,6 +3,11 @@ import '../styles/Mail.css'
 
 import emailjs from '@emailjs/browser';
 
+const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+
+
 const Mail = () => {
   const radio = useRef();
   const [toSend, setToSend] = useState({
