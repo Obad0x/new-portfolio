@@ -3,9 +3,7 @@ import '../styles/Mail.css'
 
 import emailjs from '@emailjs/browser';
 
-const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
-const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
-const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+
 
 
 const Mail = () => {
@@ -52,13 +50,13 @@ const Mail = () => {
 
   const handleClick = () => {
     validation(toSend.email, toSend.name, toSend.message, toSend.subject);
-    const condition = Object.values(valid).every((value) => value === true)
-    if (!condition) {
+    const condition = Object.values(valid).every((value) => value === false)
+    if (condition) {
       error.current.style.display = 'block'
     } else {
       // Using email.js to send emails https://www.emailjs.com/docs/sdk/installation/
     //  use .env to store ids and keys from email.js
-      emailjs.send(serviceID, templateID, toSend, publicKey)
+      emailjs.send("service_a3zn9lg", "template_fwf3s62", toSend, "EBlO4t0h2HSZhazFZ")
         .then((response) => {
           formResMsg.current.innerText = "Message sent..."
           reset();
